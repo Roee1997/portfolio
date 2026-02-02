@@ -8,6 +8,64 @@
   <link rel="stylesheet" href="src/dist/css/main.bundle.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <style>
+    /* Fix carousel to show one image at a time */
+    .carousel .carousel-cell {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    /* Ensure images fit properly within cells */
+    .carousel-cell img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 600px;
+    }
+
+    /* Center images horizontally */
+    .flickity-viewport {
+      overflow: hidden;
+    }
+
+    /* Make project cards equal height */
+    .tile.is-parent {
+      display: flex;
+    }
+
+    .tile.is-child.notification {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Fix spacing for project cards specifically */
+    .tile.is-child.notification .title {
+      margin-bottom: 0.5rem;
+      min-height: 2rem;
+      line-height: 1.25;
+    }
+
+    .tile.is-child.notification .subtitle {
+      margin-bottom: 1rem;
+      min-height: 3rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    /* Image container */
+    .tile.is-child.notification .image {
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* Push button to bottom */
+    .tile.is-child.notification .button {
+      margin-top: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -279,7 +337,7 @@
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-12">
           <div class="tile">
-            <div class="tile is-parent is-6">
+            <div class="tile is-parent is-4">
               <article class="tile is-child notification">
                 <p class="title">Codenames Game</p>
                 <p class="subtitle">AI-Integrated Real-Time Multiplayer</p>
@@ -293,7 +351,7 @@
                 </a>
               </article>
             </div>
-            <div class="tile is-parent is-6">
+            <div class="tile is-parent is-4">
               <article class="tile is-child notification">
                 <p class="title">On The Lake</p>
                 <p class="subtitle">AWS Serverless Hotel Booking Platform</p>
@@ -302,6 +360,20 @@
                 </figure>
                 <br>
                 <a href="https://github.com/Roee1997/AWS-On-The-Lake-Hotel-WEB" target="_blank" class="button is-dark is-small">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>View on GitHub</span>
+                </a>
+              </article>
+            </div>
+            <div class="tile is-parent is-4">
+              <article class="tile is-child notification">
+                <p class="title">BookCircle</p>
+                <p class="subtitle">Full-Stack Book Sharing Platform</p>
+                <figure class="image is-4by3">
+                  <img class="modal-trigger" data-target="project-3-modal" src="src/dist/img/carousel-project3/1.homePage.png">
+                </figure>
+                <br>
+                <a href="https://github.com/Roee1997/BookCircle" target="_blank" class="button is-dark is-small">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>View on GitHub</span>
                 </a>
@@ -511,6 +583,87 @@
       </section>
       <footer class="modal-card-foot">
         <a href="https://github.com/Roee1997/AWS-On-The-Lake-Hotel-WEB" target="_blank" class="button is-dark">
+          <span class="icon"><i class="fab fa-github"></i></span>
+          <span>View on GitHub</span>
+        </a>
+        <button class="button is-success">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="project-3-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">BookCircle - Full-Stack Book Sharing Platform</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+
+        <div id="project-3-modal-carousel" class="carousel">
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/1.homePage.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/2.bookDetails.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/3.myLibrary-my wish list.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/4.myLibrary-books i have read.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/5.myLibrary-Books purchased-Books available for purchase.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/6.authors.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/7.authors-click to show books.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/8.quizes.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/9.admin.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/10.admin-show books data.png">
+          </figure>
+          <figure class="image is-4by3 carousel-cell">
+            <img src="src/dist/img/carousel-project3/11.admin-insert new book.png">
+          </figure>
+        </div>
+
+        <div class="content">
+          <p>A modern, full-stack book-sharing platform that connects readers through a collaborative library ecosystem. Exchange physical books, access digital collections, rate your reads, and build a community of book lovers - all with an Apple-inspired, elegant user interface.</p>
+
+          <h4>Key Features:</h4>
+          <ul>
+            <li><strong>Smart Book Sharing:</strong> Community-driven platform with intelligent availability tracking for physical books</li>
+            <li><strong>Hybrid Library System:</strong> Digital books with unlimited access + Physical books with one-at-a-time circulation</li>
+            <li><strong>Peer-to-Peer Trading:</strong> Direct book exchange with transparent request/approval workflow</li>
+            <li><strong>Personal Library Management:</strong> Organize wishlist, track reading history, and manage your collection</li>
+            <li><strong>Interactive Features:</strong> 5-star rating system and auto-generated quizzes from your reading history</li>
+            <li><strong>Modern Admin Dashboard:</strong> Apple-inspired design with complete CRUD operations and real-time analytics</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">ASP.NET Core</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">jQuery</span>
+            <span class="tag">DataTables</span>
+            <span class="tag">SweetAlert2</span>
+          </div>
+
+        </div>
+
+      </section>
+      <footer class="modal-card-foot">
+        <a href="https://github.com/Roee1997/BookCircle" target="_blank" class="button is-dark">
           <span class="icon"><i class="fab fa-github"></i></span>
           <span>View on GitHub</span>
         </a>
